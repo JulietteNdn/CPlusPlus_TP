@@ -16,14 +16,14 @@ Point::Point(const Point &unPoint){
 
 Point::~Point(){}
 
-int Point::getX(){
+int Point::getX() const {
 	return x;	
 }
-int Point::getY(){
+int Point::getY() const {
 	return y;
 }
 
-int Point::getCompteur(){
+int Point::getCompteur() {
 	return compteur;
 }
 
@@ -42,7 +42,7 @@ void Point::setXY(int x, int y){
 
 
 
-void Point::afficheCoord(){
+void Point::afficheCoord() const {
 	cout << "(x,y)=" << "(" << x << "," << y << ")" << endl;
 	cout << endl;
 }

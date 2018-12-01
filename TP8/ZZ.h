@@ -22,7 +22,7 @@ class ZZ {
 
    ZZ(string, string, double = 0.0);
    friend bool operator<(const ZZ &, const ZZ &);
-   friend ostream & operator<<(ostream &, const ZZ &);
+   friend ostream & operator<<(ostream &, const ZZ &); //on le met en friend pour pas à avoir à construire les getteur de ZZ pour les notes & noms
    friend class CompareNote;
 };
 

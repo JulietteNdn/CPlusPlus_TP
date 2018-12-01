@@ -1,13 +1,14 @@
 #include "Point.hpp"
 
 
-ostream & operator<<(ostream & fichier, Point & unPoint){
+ostream & operator<<(ostream & fichier, const Point &unPoint){
 	/*
 	string coordonnees ;
 	coordonnees = to_string(unPoint.getX())+ " " + to_string(unPoint.getY()) ;
 	fichier << coordonnees.c_str();
 	*/
-	fichier << unPoint.getX() + unPoint.getY();
+	// fichier << unPoint.getX() << " " << unPoint.getY() ; // si la fonction << n'est PAS amie de la classe Point
+	fichier << unPoint.x << " " << unPoint.y ; // si la fonction << est amie de la classe Point
 	return fichier;
 }
 
@@ -25,21 +26,13 @@ int main(int, char**){
 	p1.setX(2);
 	
 	
-	cout << p1['y'] << endl;
-	
 	p1.afficheCoord();
 	p2.afficheCoord();
 	
 	
 	cout << Point::getCompteur() << endl;
 	
-	
-	
-	int * p = new int;
-
-   *p = 3;
-   cout << *p << endl;
-	
+	cout << p2 << endl;
 	
 	return 0;
 }

@@ -15,16 +15,18 @@ class Point{
 		Point (const Point &); // constructeur par copie
 		~Point();
 		
-		int getX();
-		int getY();
-		static int getCompteur();
+		int getX() const ;
+		int getY() const ;
+		static int getCompteur() ;
 		
 		void setX(int);
 		void setY(int);
 		void setXY(int,int);
 		
 		
-		void afficheCoord();
+		void afficheCoord() const ;
 		int& operator [](char);
 		Point& operator = (const Point &);
+		
+		friend ostream & operator<<(ostream &, const Point &);
 };

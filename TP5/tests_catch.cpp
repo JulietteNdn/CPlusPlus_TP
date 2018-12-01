@@ -2,7 +2,6 @@
 #include <cstring>
 #include <sstream> // a mettre en commentaire 
 #include "Chaine.hpp"
-#include "Null_Pointer.hpp"
 
 TEST_CASE("Constructeur par defaut") {
    Chaine c;
